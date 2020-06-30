@@ -1,7 +1,8 @@
 import React from "react";
+import Layout from "../compornents/Layout/Layout";
 
 const Top = () => {
-  return <div>top page</div>;
+  return <Layout>top page</Layout>;
 };
 
 export default Top;

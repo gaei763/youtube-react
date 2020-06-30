@@ -1,7 +1,8 @@
 import React from "react";
+import Layout from "../compornents/Layout/Layout";
 
 const Search = () => {
-  return <div>search page</div>;
+  return <Layout>search page</Layout>;
 };
 
 export default Search;
