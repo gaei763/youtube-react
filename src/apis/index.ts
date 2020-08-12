@@ -1,5 +1,7 @@
 import axios from "axios";
 
+const YOUTUBE_TOKEN = process.env.REACT_APP_YOUTUBE_TOKEN;
+
 type KeyType = "default" | "medium" | "high" | "maxres" | "standard";
 
 export interface MovieResorce {
@@ -182,8 +184,6 @@ export interface YoutubeRelatedResponse {
   };
 }
 
-const KEY = "AIzaSyB_ynWQMpCUw6z66N1nLho6NO4XM97xYvQ";
-
 const youtube = axios.create({
   baseURL: "https://www.googleapis.com/youtube/v3",
 });
@@ -191,7 +191,7 @@ const youtube = axios.create({
 const params = {
   part: "snippet",
   maxResult: 40,
-  key: KEY,
+  key: YOUTUBE_TOKEN,
   regionCode: "JP",
   type: "video",
 };
